@@ -1,0 +1,5 @@
+target/
+project/target/
+snippets/
+.ensime
+.ensime_cache/
