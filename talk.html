@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <meta name="description" content="3 languages in 3 minutes"/>
+    <meta name="description" content="3 Languages in 3 Minutes"/>
     <meta name="author" content="roland@tritsch.org"/>
 
     <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -27,7 +27,7 @@
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
-    <title>3 languages in 3 minutes</title>
+    <title>3 Languages in 3 Minutes</title>
   </head>
 
   <body>
@@ -35,19 +35,41 @@
       <div class="slides">
 	      <section>
 	        <section id="title">
-	          <h2>3 languages in 3 minutes</h2>
-	          <h3>The Fibonacci Sequence<br>in Haskell, Scala and Elixir<br>(Observations of a newbie)</h3>
+	          <h2>3 Languages in 3 Minutes</h2>
+	          <h3>The Fibonacci Sequence<br>in Haskell, Scala and Elixir<br>(Observations of a Newbie)</h3>
 	          <img src="./images/trump.jpg" width="30%"/>
 	          <p>
 	            <small>Created by <a href="mailto:roland@tritsch.org">roland@tritsch.org</a> / <a href="http://twitter.com/innolocity">@innolocity</a></small>
+	            <small>For <a href="https://codesync.global/conferences/code-elixir-ldn-2019/">Code Elixir LDN 2019</a></small>
 	          </p>
 	          <aside class="notes">
+              <ul>
+                <li>Buckle up! This is going to be fast!!! (fasten seatbelt sign)</li>
+                <li>I am Roland. I work for Community. We foster more meaningful conversations (again), between ... people (artists/fans, politicans/activists, ...) (community logo, screenshots of articles, pic of PaulMC (join the conversation))</li>
+                <li>Our entire backend is written in Elixir. I am writing code for 30 years. For the last 8 years mainly Scala and Haskell. For the last 8 weeks mainly Elixir, means ... I am an Elixir-Newbie :) (with some Erlang experience, but no Ruby background). The main aim for the talk is to share initial observations, when I compare the experience when doing software development with the 3 languages.</li>
+                <li>We are going to use the Fibonacci sequence to populate this sheet ...</li>
+                <li>For all three languages I am looking at build env, test env, bench env, IDE, ..., repositories, ...</li>
+                <li>The Fibonacci sequence is ... (the math/formula, golden circle, donald trunp, ...). The Fibonnacci sequence can ... explain (almost) everything!!!</li>
+                <li>Here is the initial/simple (recursive) implementation in Haskell, Scala and Elixir. This will ... not work. Too slow ... and it will create a stack-overflow (for larger numbers) (show table with performance numbers and max number before stack-overflow). Main observation/take-away ...</li>
+                <li>Here is a tailend-recursive implementation (Haskell, Scala, Elixir). But ... still slow. Main observation/take-away ...</li>
+                <li>Here is a/the fastest implementation (Haskell, Scala, Elixir). Main observation/take-away ...</li>
+                <li>(Exec) Summary: Show the table</li>
+                <li>Table cols: Haskell, Scala, Elixir</li>
+                <li>Table rows: Build: stack, sbt, mix</li>
+                <li>Table rows: Test: Hspec, scala-test, ExUnit</li>
+                <li>Table rows: Bench: criterion, scala-bench, ???</li>
+                <li>Table rows: Package: hackage, ???, hex</li>
+                <li>Table rows: IDE/emacs: intero, ensime, alchemist</li>
+                <li>Table rows: Performance: ???, ???, ???</li>
+                <li>Table rows: Good: ???, ???, ???</li>
+                <li>Table rows: Less good: ???, ???, ???</li>
+              </ul>
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>Who, what, why</h2>
+	          <h2>Roland @ Community</h2>
             <ul>
-              <li><a href="http://www.tritsch.org/about">Roland</a> - (Very :)) Senior Software Engineer @ <a href="https://community.com">Community</a></li>
+              <li><a href="http://www.tritsch.org/about">Roland</a> - Senior Software Engineer @ <a href="https://community.com">Community</a></li>
               <li>Fostering more meaningful conversations (again)!!!</li>
               <li>???</li>
             </ul>
