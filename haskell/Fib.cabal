@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d0400766631449d01f2adb94cadb1cb60029ed0c1987718db2e774465c427e59
+-- hash: c4b0fb96b74694b2c583ecd0271a867a6479d032ef25d3226af5f1ed166ea7ea
 
 name:           Fib
 version:        0.1.0.0
@@ -38,7 +38,7 @@ executable fib-exe
       Paths_Fib
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N1
   build-depends:
       Fib
     , base >=4.7 && <5
