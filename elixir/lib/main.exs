@@ -2,4 +2,4 @@
 |> hd()
 |> Integer.parse()
 
-IO.puts("#{Fib.fib(n)}")
+IO.puts("#{Fib.fib2(n)}")
