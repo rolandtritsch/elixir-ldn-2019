@@ -225,7 +225,100 @@ end
             <br>
             <ul>
               <li>BEAM starts faster than JVM</li>
-              <li>Slow and ... will make stack explode :)</li>
+              <li>Slow and ... stack will explode :)</li>
+              <li>Cannot compute large n-th (int overflow)</li>
+            </ul>
+            <aside class="notes">
+	          </aside>
+	        </section>
+	      </section>
+
+	      <section>
+ 	        <section>
+	          <h2>TER - Haskell</h2>
+            <pre><code class="hljs" data-trim data-line-numbers>
+module Fib where
+
+fib :: Int -> Int
+fib 0 = 0
+fib 1 = 1
+fib n = fib (n - 1) + fib (n - 2)
+
+fib2 :: Integer -> Integer
+fib2 n = go n (0, 1) where
+  go 0 (a, _) = a
+  go n (a, b) = go (n - 1) (b, a + b)
+            </code></pre>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>TER - Scala</h2>
+            <pre><code class="hljs" data-trim data-line-numbers>
+object Fib {
+  def fib(n: Int): Int = n match {
+    case 0 => 0
+    case 1 => 1
+    case _ => fib(n - 1) + fib(n - 2)
+  }
+
+  import scala.math.BigInt
+
+  def fib2(n: Int): BigInt = {
+    def go(n: Int, acc: (BigInt, BigInt)): BigInt = n match {
+      case 0 => acc._1
+      case _ => go(n - 1, (acc._2, acc._1 + acc._2))
+    }
+
+    go(n, (0, 1))
+  }
+}
+            </code></pre>
+            <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>TER - Elixir</h2>
+            <pre><code class="hljs" data-trim data-line-numbers>
+defmodule Fib do
+  @moduledoc false
+
+  def fib(0), do: 0
+  def fib(1), do: 1
+  def fib(n), do: fib(n - 1) + fib(n - 2)
+
+  def fib2(n), do: go2(n, {0, 1})
+  defp go2(0, {a, _}), do: a
+  defp go2(n, {a, b}), do: go2(n - 1, {b, a + b})
+end
+            </code></pre>
+            <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>TER - Observations/Take-aways ...</h2>
+            <p>
+              Running <code>fib2(1000)</code>; Results in secs; Using time; Not (very) sientific :)
+            </p>
+            <table>
+              <tr>
+                <th></th>
+                <th>Haskell</th>
+                <th>Scala</th>
+                <th>Elixir</th>
+              </tr>
+              <tr>
+                <td>performance</td>
+                <td>???</td>
+                <td>???</td>
+                <td>???</td>
+              </tr>
+            </table>
+            <br>
+            <ul>
+              <li>???</li>
+              <li>???</li>
+              <li>???</li>
             </ul>
             <aside class="notes">
 	          </aside>
