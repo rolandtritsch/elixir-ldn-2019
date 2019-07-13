@@ -37,67 +37,115 @@
 	        <section id="title">
 	          <h2>3 Languages in 3 Minutes</h2>
 	          <h3>The Fibonacci Sequence<br>in Haskell, Scala and Elixir<br>(Observations of a Newbie)</h3>
-	          <img src="./images/trump.jpg" width="30%"/>
 	          <p>
-	            <small>Created by <a href="mailto:roland@tritsch.org">roland@tritsch.org</a> / <a href="http://twitter.com/innolocity">@innolocity</a></small>
-	            <small>For <a href="https://codesync.global/conferences/code-elixir-ldn-2019/">Code Elixir LDN 2019</a></small>
+	            <small>
+                Created by <a href="mailto:roland@tritsch.org">roland@tritsch.org</a> / <a href="http://twitter.com/innolocity">@innolocity</a>
+	              <br>
+                For <a href="https://codesync.global/conferences/code-elixir-ldn-2019/">Code Elixir LDN - 2019</a>
+              </small>
 	          </p>
+	          <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>Buckle up :)</h2>
+	          <img src="./images/fasten-seat-belt.png" width="80%"/>
 	          <aside class="notes">
               <ul>
                 <li>Buckle up! This is going to be fast!!! (fasten seatbelt sign)</li>
-                <li>I am Roland. I work for Community. We foster more meaningful conversations (again), between ... people (artists/fans, politicans/activists, ...) (community logo, screenshots of articles, pic of PaulMC (join the conversation))</li>
-                <li>Our entire backend is written in Elixir. I am writing code for 30 years. For the last 8 years mainly Scala and Haskell. For the last 8 weeks mainly Elixir, means ... I am an Elixir-Newbie :) (with some Erlang experience, but no Ruby background). The main aim for the talk is to share initial observations, when I compare the experience when doing software development with the 3 languages.</li>
-                <li>We are going to use the Fibonacci sequence to populate this sheet ...</li>
-                <li>For all three languages I am looking at build env, test env, bench env, IDE, ..., repositories, ...</li>
-                <li>The Fibonacci sequence is ... (the math/formula, golden circle, donald trunp, ...). The Fibonnacci sequence can ... explain (almost) everything!!!</li>
-                <li>Here is the initial/simple (recursive) implementation in Haskell, Scala and Elixir. This will ... not work. Too slow ... and it will create a stack-overflow (for larger numbers) (show table with performance numbers and max number before stack-overflow). Main observation/take-away ...</li>
-                <li>Here is a tailend-recursive implementation (Haskell, Scala, Elixir). But ... still slow. Main observation/take-away ...</li>
-                <li>Here is a/the fastest implementation (Haskell, Scala, Elixir). Main observation/take-away ...</li>
-                <li>(Exec) Summary: Show the table</li>
-                <li>Table cols: Haskell, Scala, Elixir</li>
-                <li>Table rows: Build: stack, sbt, mix</li>
-                <li>Table rows: Test: Hspec, scala-test, ExUnit</li>
-                <li>Table rows: Bench: criterion, scala-bench, ???</li>
-                <li>Table rows: Package: hackage, ???, hex</li>
-                <li>Table rows: IDE/emacs: intero, ensime, alchemist</li>
-                <li>Table rows: Performance: ???, ???, ???</li>
-                <li>Table rows: Good: ???, ???, ???</li>
-                <li>Table rows: Less good: ???, ???, ???</li>
               </ul>
 	          </aside>
 	        </section>
 	        <section>
 	          <h2>Roland @ Community</h2>
             <ul>
-              <li><a href="http://www.tritsch.org/about">Roland</a> - Senior Software Engineer @ <a href="https://community.com">Community</a></li>
-              <li>Fostering more meaningful conversations (again)!!!</li>
-              <li>???</li>
+              <li><a href="http://www.tritsch.org/about">Senior Software Engineer</a> @ <a href="https://community.com">Community</a></li>
+              <li>Fostering more meaningful conversations between poeple (again)!!!</li>
+              <li>Entire backend is in Elixir</li>
+              <li>Globally distributed software engineering team</li>
+              <li>Come and find me afterwards to learn more :)</li>
             </ul>
 	          <aside class="notes">
+              <ul>
+                <li>I am Roland. I work for Community. We foster more meaningful conversations (again), between ... people (artists/fans, politicans/activists, ...) (community logo, screenshots of articles, pic of PaulMC (join the conversation))</li>
+                <li>Our entire backend is written in Elixir. I am writing code for 30 years. For the last 8 years mainly Scala and Haskell. For the last 8 weeks mainly Elixir, means ... I am an Elixir-Newbie :) (with some Erlang experience, but no Ruby background). The main aim for the talk is to share initial observations, when I compare the experience when doing software development with the 3 languages.</li>
+              </ul>
 	          </aside>
 	        </section>
-	      </section>
-	      <section>
+	        <section>
+	          <h2>In the next 3 Minutes ...</h2>
+            <p><center>
+              We are going to use the Fibonacci Sequence to fill out this table
+            </center></p>
+            <table>
+              <tr>
+                <th></th>
+                <th>Haskell</th>
+                <th>Scala</th>
+                <th>Elixir</th>
+              </tr>
+              <tr>
+                <td>build</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>package</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>IDE</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Performance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Good</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>!So good</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+	          <aside class="notes">
+              <ul>
+                <li>We are going to use the Fibonacci sequence to populate this sheet ...</li>
+                <li>For all three languages I am looking at build env, test env, bench env, IDE, ..., repositories, ...</li>
+              </ul>
+	          </aside>
+	        </section>
  	        <section>
-	          <h2>TTTA :)</h2>
-            <ul>
-              <li>Micro-Benchmarking</li>
-              <li>Fibonacci Sequence</li>
-              <li>Haskell, Scala, Elixir</li>
-            </ul>
+	          <h2><a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a></h2>
+	          <img src="./images/fibonacci.jpg" width="60%"/>
+            <aside class="notes">
+              <ul>
+                <li>The Fibonacci sequence is ... (the math/formula, golden circle, donald trump, ...). The Fibonnacci sequence can ... explain (almost) everything!!!</li>
+              </ul>
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2><a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a></h2>
+	          <img src="./images/sunflower.jpg" width="60%"/>
             <aside class="notes">
 	          </aside>
 	        </section>
  	        <section>
-	          <h2><a href="http://scalameter.github.io/home/gettingstarted/0.7">Micro-Benchmarking</a> (Disclaimer)</h2>
-            <p align="center">
-              We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. - Donald Knuth
-            </p>
-            <ul>
-              <li>Heisenberg @ Work :)</li>
-              <li>Absolut vs. Relative</li>
-              <li>Use with care!!!</li>
-            </ul>
+	          <h2><a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a></h2>
+	          <img src="./images/trump.jpg" width="60%"/>
             <aside class="notes">
 	          </aside>
 	        </section>
@@ -105,110 +153,140 @@
 	          <h2><a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a></h2>
             <ul>
               <li>Simple - fib n = fib (n - 1) + fib (n - 2)</li>
-              <li>Stream - Infinite (lazy) list. Using <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/Stream.html">zipWith</a></li>
-              <li>Fast Stream - Infinite (lazy) list. Using self reference</li>
-              <li>Constant - <a href="https://en.wikipedia.org/wiki/Jacques_Philippe_Marie_Binet">Binet</a> :)</li>
+              <li>Tail-End Recursive - fib n acc = ...</li>
+              <li>Fast - Infinite (lazy) list</li>
             </ul>
-            <aside class="notes">
-	          </aside>
-	        </section>
- 	        <section>
-	          <h2><a href="https://github.com/rolandtritsch/haskell-fib-bench">Haskell</a></h2>
-            <ul>
-              <li><a href="https://docs.haskellstack.org">Stack</a></li>
-              <li><a href="https://hackage.haskell.org/package/criterion">Criterion</a></li>
-            </ul>
-            <aside class="notes">
-	          </aside>
-	        </section>
- 	        <section>
-	          <h2><a href="https://github.com/rolandtritsch/scala-fib-bench">Scala</a></h2>
-            <ul>
-              <li><a href="http://www.scala-sbt.org">Sbt</a></li>
-              <li><a href="https://scalameter.github.io">Scala-Meter</a></li>
-            </ul>
-            <aside class="notes">
-	          </aside>
-	        </section>
- 	        <section>
-	          <h2><a href="https://github.com/rolandtritsch/scala-native-bench">Scala-Native</a></h2>
-            <ul>
-              <li>Sbt</li>
-              <li>???</li>
-            </ul>
-            <aside class="notes">
-	          </aside>
-	        </section>
- 	        <section>
-	          <h2>Results</h2>
-            <table>
-              <tr>
-                <th></th>
-                <th>Simple(30)(ms)</th>
-                <th>Stream(30k)(ms)</th>
-                <th>Fast (30k)(ms)</th>
-                <th>Binet(30k)(ms)</th>
-              </tr>
-              <tr>
-                <td>Haskell</td>
-                <td>6.0</td>
-                <td>0.070</td>
-                <td>0.080</td>
-                <td>0.001</td>
-              </tr>
-              <tr>
-                <td>Scala</td>
-                <td>6.6</td>
-                <td>8.5</td>
-                <td>4.2</td>
-                <td>0.003</td>
-              </tr>
-              <tr>
-                <td>SN (deb)</td>
-                <td>72.0</td>
-                <td>34.0</td>
-                <td>13.0</td>
-                <td>0.001</td>
-              </tr>
-              <tr>
-                <td>SN (rel)</td>
-                <td>45.5</td>
-                <td>13.5</td>
-                <td>7.3</td>
-                <td>0.001</td>
-              </tr>
-            </table>
             <aside class="notes">
 	          </aside>
 	        </section>
 	      </section>
 
 	      <section>
-	        <section>
-	          <h2>Summary & Take-aways</h2>
-	          <ul>
-	            <li>Haskell < Scala < Scala-Native</li>
-	            <li>Implementation < Language</li>
-	            <li>May the Donald be with you :)</li>
-	          </ul>
-	          <aside class="notes">
+ 	        <section>
+	          <h2>Simple - Haskell</h2>
+            <pre><code class="hljs" data-trim data-line-numbers>
+module Fib where
+
+fib :: Int -> Int
+fib 0 = 0
+fib 1 = 1
+fib n = fib (n - 1) + fib (n - 2)
+            </code></pre>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Simple - Scala</h2>
+            <pre><code class="hljs" data-trim data-line-numbers>
+object Fib {
+  def fib(n: Int): Int = n match {
+    case 0 => 0
+    case 1 => 1
+    case _ => fib(n - 1) + fib(n - 2)
+  }
+}
+            </code></pre>
+            <aside class="notes">
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>Questions?</h2>
-            <img width="50%" src="https://s3.amazonaws.com/cf-nitroengassets-prod/images/sites/gonitro/brand-assets/nitro-logo-thumb-default.svg"/>
-	          <aside class="notes">
+	          <h2>Simple - Elixir</h2>
+            <pre><code class="hljs" data-trim data-line-numbers>
+defmodule Fib do
+  @moduledoc false
+
+  def fib(0), do: 0
+  def fib(1), do: 1
+  def fib(n), do: fib(n - 1) + fib(n - 2)
+end
+            </code></pre>
+            <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>Simple - Observations/Take-aways ...</h2>
+            <p>
+              Running <code>fib(42)</code>; Results in secs; Using time; Not (very) sientific :)
+            </p>
+            <table>
+              <tr>
+                <th></th>
+                <th>Haskell</th>
+                <th>Scala</th>
+                <th>Elixir</th>
+              </tr>
+              <tr>
+                <td>performance</td>
+                <td>2</td>
+                <td>14</td>
+                <td>7</td>
+              </tr>
+            </table>
+            <br>
+            <ul>
+              <li>BEAM starts faster than JVM</li>
+              <li>Slow and ... will make stack explode :)</li>
+            </ul>
+            <aside class="notes">
 	          </aside>
 	        </section>
 	      </section>
+
+       <section>
+	        <section>
+	          <h2>Final - Observations/Take-aways ...</h2>
+            <table>
+              <tr>
+                <th></th>
+                <th>Haskell</th>
+                <th>Scala</th>
+                <th>Elixir</th>
+              </tr>
+              <tr>
+                <td>build</td>
+                <td>stack</td>
+                <td>sbt</td>
+                <td>mix</td>
+              </tr>
+              <tr>
+                <td>package</td>
+                <td>hackage</td>
+                <td>maven</td>
+                <td>hex</td>
+              </tr>
+              <tr>
+                <td>IDE</td>
+                <td>intero</td>
+                <td>ensime</td>
+                <td>alchemist</td>
+              </tr>
+              <tr>
+                <td>Performance</td>
+                <td>2</td>
+                <td>14</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Good</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>!So good</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+	          <aside class="notes">
+	          </aside>
+	        </section>
+       </section>
 
 	      <section>
 	        <section>
 	          <h2>Appendix - Resources</h2>
-	          <ul>
-	            <li><a href="https://github.com/scala-native/scala-native/issues/731">Boxing</a></li>
-	            <li><a href="https://github.com/twitter/reasonable-scala/issues/22">Release Mode</a></li>
-	          </ul>
 	          <aside class="notes">
 	          </aside>
 	        </section>
