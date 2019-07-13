@@ -3,4 +3,4 @@
 To make this work, you need to run ...
 
 * `sbt test`
-* `mix "run 10"`
+* `sbt "run 10"`
