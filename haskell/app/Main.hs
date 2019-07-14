@@ -7,4 +7,4 @@ import Fib
 main :: IO ()
 main = do
   args <- getArgs
-  print $ fib2 $ read $ head args
+  print $ fib3 $ read $ head args
