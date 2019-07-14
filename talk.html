@@ -75,7 +75,7 @@
 	        <section>
 	          <h2>In the next 3 Minutes ...</h2>
             <p><center>
-              We are going to use the Fibonacci Sequence to fill out this table
+              ... we are going to use the Fibonacci Sequence to fill out this table ...
             </center></p>
             <table>
               <tr>
@@ -122,10 +122,6 @@
               </tr>
             </table>
 	          <aside class="notes">
-              <ul>
-                <li>We are going to use the Fibonacci sequence to populate this sheet ...</li>
-                <li>For all three languages I am looking at build env, test env, bench env, IDE, ..., repositories, ...</li>
-              </ul>
 	          </aside>
 	        </section>
  	        <section>
@@ -239,12 +235,7 @@ end
             <pre><code class="hljs" data-trim data-line-numbers>
 module Fib where
 
-fib :: Int -> Int
-fib 0 = 0
-fib 1 = 1
-fib n = fib (n - 1) + fib (n - 2)
-
-fib2 :: Integer -> Integer
+fib2 :: Int -> Integer
 fib2 n = go n (0, 1) where
   go 0 (a, _) = a
   go n (a, b) = go (n - 1) (b, a + b)
@@ -256,12 +247,6 @@ fib2 n = go n (0, 1) where
 	          <h2>TER - Scala</h2>
             <pre><code class="hljs" data-trim data-line-numbers>
 object Fib {
-  def fib(n: Int): Int = n match {
-    case 0 => 0
-    case 1 => 1
-    case _ => fib(n - 1) + fib(n - 2)
-  }
-
   import scala.math.BigInt
 
   def fib2(n: Int): BigInt = {
@@ -283,10 +268,6 @@ object Fib {
 defmodule Fib do
   @moduledoc false
 
-  def fib(0), do: 0
-  def fib(1), do: 1
-  def fib(n), do: fib(n - 1) + fib(n - 2)
-
   def fib2(n), do: go2(n, {0, 1})
   defp go2(0, {a, _}), do: a
   defp go2(n, {a, b}), do: go2(n - 1, {b, a + b})
@@ -299,6 +280,78 @@ end
 	          <h2>TER - Observations/Take-aways ...</h2>
             <p>
               Running <code>fib2(1000)</code>; Results in secs; Using time; Not (very) sientific :)
+            </p>
+            <table>
+              <tr>
+                <th></th>
+                <th>Haskell</th>
+                <th>Scala</th>
+                <th>Elixir</th>
+              </tr>
+              <tr>
+                <td>performance</td>
+                <td>???</td>
+                <td>???</td>
+                <td>???</td>
+              </tr>
+            </table>
+            <br>
+            <ul>
+              <li>???</li>
+              <li>???</li>
+              <li>???</li>
+            </ul>
+            <aside class="notes">
+	          </aside>
+	        </section>
+	      </section>
+
+	      <section>
+ 	        <section>
+	          <h2>Lazy - Haskell</h2>
+            <pre><code class="hljs" data-trim data-line-numbers>
+module Fib where
+
+fib3 :: Int -> Integer
+fib3 n = fibs !! n where
+  fibs = 0 : 1 : next fibs where
+    next (a : t@(b:_)) = (a + b) : next t
+            </code></pre>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Lasy - Scala</h2>
+            <pre><code class="hljs" data-trim data-line-numbers>
+object Fib {
+  import scala.math.BigInt
+
+  def fib3(n: Int): BigInt = {
+    def fibs(a: BigInt, b: BigInt): Stream[BigInt] = a #:: fibs(b, a + b)
+    fibs(BigInt(0), BigInt(1))(n)
+  }
+}
+            </code></pre>
+            <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>Lasy - Elixir</h2>
+            <pre><code class="hljs" data-trim data-line-numbers>
+defmodule Fib do
+  @moduledoc false
+
+  def fib3(n), do: fibs() |> Enum.at(n)
+  defp fibs(), do: Stream.unfold({0, 1}, fn {a, b} -> {a, {b, a + b}} end)
+end
+            </code></pre>
+            <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>Lasy - Observations/Take-aways ...</h2>
+            <p>
+              Running <code>fib3(1000)</code>; Results in secs; Using time; Not (very) sientific :)
             </p>
             <table>
               <tr>
@@ -372,6 +425,16 @@ end
                 <td></td>
               </tr>
             </table>
+	          <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>Final - Observations/Take-aways ...</h2>
+            <ul>
+              <li>???</li>
+              <li>???</li>
+              <li>???</li>
+            </ul>
 	          <aside class="notes">
 	          </aside>
 	        </section>
