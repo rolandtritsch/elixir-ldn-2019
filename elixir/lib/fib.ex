@@ -8,4 +8,7 @@ defmodule Fib do
   def fib2(n), do: go2(n, {0, 1})
   defp go2(0, {a, _}), do: a
   defp go2(n, {a, b}), do: go2(n - 1, {b, a + b})
+
+  def fib3(n), do: fibs() |> Enum.at(n)
+  defp fibs(), do: Stream.unfold({0, 1}, fn {a, b} -> {a, {b, a + b}} end)
 end
