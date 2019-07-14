@@ -17,7 +17,7 @@ object Fib {
   }
 
   def fib3(n: Int): BigInt = {
-    def fibs(i: BigInt, ii: BigInt): Stream[BigInt] = i #:: fibs(ii, i + ii)
+    def fibs(a: BigInt, b: BigInt): Stream[BigInt] = a #:: fibs(b, a + b)
     fibs(BigInt(0), BigInt(1))(n)
   }
 }
