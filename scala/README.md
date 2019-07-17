@@ -3,4 +3,4 @@
 To make this work, you need to run ...
 
 * `sbt test`
-* `sbt "run 10"`
+* `sbt "run 42 10000 10000"`
