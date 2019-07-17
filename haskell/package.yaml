@@ -23,6 +23,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N1
     dependencies:
+    - timeit
     - Fib
 
 tests:

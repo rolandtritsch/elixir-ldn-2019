@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c4b0fb96b74694b2c583ecd0271a867a6479d032ef25d3226af5f1ed166ea7ea
+-- hash: ab5b67bab358a08e824199e42bff6b99e58fbab178756a3ff94bfa5b9c3f6fed
 
 name:           Fib
 version:        0.1.0.0
@@ -42,6 +42,7 @@ executable fib-exe
   build-depends:
       Fib
     , base >=4.7 && <5
+    , timeit
   default-language: Haskell2010
 
 test-suite fib-test
