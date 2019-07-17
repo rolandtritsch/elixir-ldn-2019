@@ -3,4 +3,4 @@
 To make this work, you need to run ...
 
 * `mix test`
-* `mix run lib/main.exs 10`
+* `mix run lib/main.exs 42 10000 10000`
