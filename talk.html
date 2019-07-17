@@ -39,9 +39,11 @@
 	          <h3>The Fibonacci Sequence<br>in Haskell, Scala and Elixir<br>(Observations of a Newbie)</h3>
 	          <p>
 	            <small>
-                Created by <a href="mailto:roland@tritsch.org">roland@tritsch.org</a> / <a href="http://twitter.com/innolocity">@innolocity</a>
+                <a href="mailto:roland@tritsch.org">roland@tritsch.org</a> / <a href="http://twitter.com/innolocity">@innolocity</a>
 	              <br>
-                For <a href="https://codesync.global/conferences/code-elixir-ldn-2019/">Code Elixir LDN - 2019</a>
+                <a href="https://codesync.global/conferences/code-elixir-ldn-2019/">Code Elixir LDN - 2019</a>
+                <br>
+                <a href="https://github.com/rolandtritsch/elixir-ldn-2019">https://github.com/rolandtritsch/elixir-ldn-2019</a>
               </small>
 	          </p>
 	          <aside class="notes">
@@ -49,7 +51,7 @@
 	        </section>
 	        <section>
 	          <h2>Buckle up :)</h2>
-	          <img src="./images/fasten-seat-belt.png" width="80%"/>
+	          <img src="./images/squirrel.jpg" width="50%"/>
 	          <aside class="notes">
               <ul>
                 <li>Buckle up! This is going to be fast!!! (fasten seatbelt sign)</li>
@@ -61,15 +63,27 @@
             <ul>
               <li><a href="http://www.tritsch.org/about">Senior Software Engineer</a> @ <a href="https://community.com">Community</a></li>
               <li>Fostering more meaningful conversations between poeple (again)!!!</li>
-              <li>Entire backend is in Elixir</li>
-              <li>Globally distributed software engineering team</li>
-              <li>Come and find me afterwards to learn more :)</li>
+              <li>Entire backend is in Elixir </li>
+              <li>Globally distributed software engineering team (LAX, DUB, FCO, ...)</li>
+              <li>Come and find me afterwards to learn more :) ...</li>
             </ul>
 	          <aside class="notes">
               <ul>
                 <li>I am Roland. I work for Community. We foster more meaningful conversations (again), between ... people (artists/fans, politicans/activists, ...) (community logo, screenshots of articles, pic of PaulMC (join the conversation))</li>
                 <li>Our entire backend is written in Elixir. I am writing code for 30 years. For the last 8 years mainly Scala and Haskell. For the last 8 weeks mainly Elixir, means ... I am an Elixir-Newbie :) (with some Erlang experience, but no Ruby background). The main aim for the talk is to share initial observations, when I compare the experience when doing software development with the 3 languages.</li>
               </ul>
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>Roland @ Community</h2>
+	          <img src="./images/paul.png" width="30%"/>
+	          <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>Roland @ Community</h2>
+	          <img src="./images/marshmellow2.png" width="50%"/>
+	          <aside class="notes">
 	          </aside>
 	        </section>
 	        <section>
@@ -85,19 +99,7 @@
                 <th>Elixir</th>
               </tr>
               <tr>
-                <td>build</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>package</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>IDE</td>
+                <td>Development</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -109,13 +111,7 @@
                 <td></td>
               </tr>
               <tr>
-                <td>Good</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>!So good</td>
+                <td>Observations</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -160,7 +156,7 @@
 	      <section>
  	        <section>
 	          <h2>Simple - Haskell</h2>
-            <pre><code class="hljs" data-trim data-line-numbers>
+            <pre><code class="haskell" data-trim data-line-numbers>
 module Fib where
 
 fib :: Int -> Int
@@ -173,7 +169,7 @@ fib n = fib (n - 1) + fib (n - 2)
 	        </section>
  	        <section>
 	          <h2>Simple - Scala</h2>
-            <pre><code class="hljs" data-trim data-line-numbers>
+            <pre><code class="scala" data-trim data-line-numbers>
 object Fib {
   def fib(n: Int): Int = n match {
     case 0 => 0
@@ -187,7 +183,7 @@ object Fib {
 	        </section>
 	        <section>
 	          <h2>Simple - Elixir</h2>
-            <pre><code class="hljs" data-trim data-line-numbers>
+            <pre><code class="elixir" data-trim data-line-numbers>
 defmodule Fib do
   @moduledoc false
 
@@ -200,10 +196,7 @@ end
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>Simple - Observations/Take-aways ...</h2>
-            <p>
-              Running <code>fib(42)</code>; Results in secs; Using time; Not (very) sientific :)
-            </p>
+	          <h2>Simple - Summary</h2>
             <table>
               <tr>
                 <th></th>
@@ -212,15 +205,22 @@ end
                 <th>Elixir</th>
               </tr>
               <tr>
-                <td>performance</td>
-                <td>2</td>
-                <td>14</td>
-                <td>7</td>
+                <td>Performance</td>
+                <td>9.2</td>
+                <td>6.8</td>
+                <td>34.2</td>
+              </tr>
+              <tr>
+                <td>Observations</td>
+                <td>???</td>
+                <td>???</td>
+                <td>???</td>
               </tr>
             </table>
-            <br>
+            <hr>
             <ul>
-              <li>BEAM starts faster than JVM</li>
+              <li>fib(42)</li>
+              <li>Results in secs; Not (very) sientific :)</li>
               <li>Slow and ... stack will explode :)</li>
               <li>Cannot compute large n-th (int overflow)</li>
             </ul>
@@ -232,7 +232,7 @@ end
 	      <section>
  	        <section>
 	          <h2>TER - Haskell</h2>
-            <pre><code class="hljs" data-trim data-line-numbers>
+            <pre><code class="haskell" data-trim data-line-numbers>
 module Fib where
 
 fib2 :: Int -> Integer
@@ -245,7 +245,7 @@ fib2 n = go n (0, 1) where
 	        </section>
  	        <section>
 	          <h2>TER - Scala</h2>
-            <pre><code class="hljs" data-trim data-line-numbers>
+            <pre><code class="scala" data-trim data-line-numbers>
 object Fib {
   import scala.math.BigInt
 
@@ -264,7 +264,7 @@ object Fib {
 	        </section>
 	        <section>
 	          <h2>TER - Elixir</h2>
-            <pre><code class="hljs" data-trim data-line-numbers>
+            <pre><code class="elixir" data-trim data-line-numbers>
 defmodule Fib do
   @moduledoc false
 
@@ -277,10 +277,7 @@ end
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>TER - Observations/Take-aways ...</h2>
-            <p>
-              Running <code>fib2(1000)</code>; Results in secs; Using time; Not (very) sientific :)
-            </p>
+	          <h2>TER - Summary</h2>
             <table>
               <tr>
                 <th></th>
@@ -289,15 +286,21 @@ end
                 <th>Elixir</th>
               </tr>
               <tr>
-                <td>performance</td>
+                <td>Performance</td>
+                <td>0.012</td>
+                <td>0.115</td>
+                <td>0.008</td>
+              </tr>
+              <tr>
+                <td>Observations</td>
                 <td>???</td>
                 <td>???</td>
                 <td>???</td>
               </tr>
             </table>
-            <br>
+            <hr>
             <ul>
-              <li>???</li>
+              <li>fib2(10000)</li>
               <li>???</li>
               <li>???</li>
             </ul>
@@ -309,7 +312,7 @@ end
 	      <section>
  	        <section>
 	          <h2>Lazy - Haskell</h2>
-            <pre><code class="hljs" data-trim data-line-numbers>
+            <pre><code class="haskell" data-trim data-line-numbers>
 module Fib where
 
 fib3 :: Int -> Integer
@@ -321,8 +324,8 @@ fib3 n = fibs !! n where
 	          </aside>
 	        </section>
  	        <section>
-	          <h2>Lasy - Scala</h2>
-            <pre><code class="hljs" data-trim data-line-numbers>
+	          <h2>Lazy - Scala</h2>
+            <pre><code class="scala" data-trim data-line-numbers>
 object Fib {
   import scala.math.BigInt
 
@@ -336,8 +339,8 @@ object Fib {
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>Lasy - Elixir</h2>
-            <pre><code class="hljs" data-trim data-line-numbers>
+	          <h2>Lazy - Elixir</h2>
+            <pre><code class="elixir" data-trim data-line-numbers>
 defmodule Fib do
   @moduledoc false
 
@@ -349,10 +352,7 @@ end
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>Lasy - Observations/Take-aways ...</h2>
-            <p>
-              Running <code>fib3(1000)</code>; Results in secs; Using time; Not (very) sientific :)
-            </p>
+	          <h2>Lazy - Summary</h2>
             <table>
               <tr>
                 <th></th>
@@ -361,15 +361,21 @@ end
                 <th>Elixir</th>
               </tr>
               <tr>
-                <td>performance</td>
+                <td>Performance</td>
+                <td>0.008</td>
+                <td>0.081</td>
+                <td>0.012</td>
+              </tr>
+              <tr>
+                <td>Observations</td>
                 <td>???</td>
                 <td>???</td>
                 <td>???</td>
               </tr>
             </table>
-            <br>
+            <hr>
             <ul>
-              <li>???</li>
+              <li>fib3(10000)</li>
               <li>???</li>
               <li>???</li>
             </ul>
@@ -380,7 +386,7 @@ end
 
        <section>
 	        <section>
-	          <h2>Final - Observations/Take-aways ...</h2>
+	          <h2>Summary - Summary</h2>
             <table>
               <tr>
                 <th></th>
@@ -389,64 +395,40 @@ end
                 <th>Elixir</th>
               </tr>
               <tr>
-                <td>build</td>
-                <td>stack</td>
-                <td>sbt</td>
-                <td>mix</td>
-              </tr>
-              <tr>
-                <td>package</td>
-                <td>hackage</td>
-                <td>maven</td>
-                <td>hex</td>
-              </tr>
-              <tr>
-                <td>IDE</td>
-                <td>intero</td>
-                <td>ensime</td>
-                <td>alchemist</td>
+                <td>Build</td>
+                <td>stack, hackage, intero, ...</td>
+                <td>sbt, mvn, ensime, ...</td>
+                <td>mix, hex, alchemist, ...</td>
               </tr>
               <tr>
                 <td>Performance</td>
-                <td>2</td>
-                <td>14</td>
-                <td>7</td>
+                <td>???</td>
+                <td>???</td>
+                <td>???</td>
               </tr>
               <tr>
-                <td>Good</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>!So good</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Observations</td>
+                <td>???</td>
+                <td>???</td>
+                <td>???</td>
               </tr>
             </table>
 	          <aside class="notes">
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>Final - Observations/Take-aways ...</h2>
-            <ul>
-              <li>???</li>
-              <li>???</li>
-              <li>???</li>
-            </ul>
+	          <h2>Summary - Summary</h2>
+	          <img src="./images/elixir-haskell.png" width="50%"/>
+	          <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>Summary - Summary</h2>
+	          <img src="./images/elixir-scala.png" width="45%"/>
 	          <aside class="notes">
 	          </aside>
 	        </section>
        </section>
-
-	      <section>
-	        <section>
-	          <h2>Appendix - Resources</h2>
-	          <aside class="notes">
-	          </aside>
-	        </section>
-	      </section>
       </div>
     </div>
 
