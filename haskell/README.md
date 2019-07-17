@@ -3,4 +3,4 @@
 To make this work, you need to run ...
 
 * `stack test`
-* `stack run 10`
+* `stack run 42 10000 10000`
