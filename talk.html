@@ -50,7 +50,7 @@
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>Buckle up :)</h2>
+	          <h2>Ready, steady, ...</h2>
 	          <img src="./images/squirrel.jpg" width="50%"/>
 	          <aside class="notes">
               <ul>
@@ -61,10 +61,17 @@
 	        <section>
 	          <h2>Roland @ Community</h2>
             <ul>
-              <li><a href="http://www.tritsch.org/about">Senior Software Engineer</a> @ <a href="https://community.com">Community</a></li>
-              <li>Fostering more meaningful conversations between poeple (again)!!!</li>
-              <li>Entire backend is in Elixir </li>
-              <li>Globally distributed software engineering team (LAX, DUB, FCO, ...)</li>
+              <li>Roland</li>
+              <ul>
+                <li><a href="http://www.tritsch.org/about">Senior Software Engineer</a> @ <a href="https://community.com">Community</a></li>
+                <li>30 years of building large distributed systems; 8 years of Haskell and Scala; 8 weeks of Elixir</li>
+              </ul>
+              <li>Community</li>
+              <ul>
+                <li>Fostering (more) meaningful conversations (again)!!!</li>
+                <li>Entire backend is in Elixir </li>
+                <li>Globally distributed software engineering team</li>
+              </ul>
               <li>Come and find me afterwards to learn more :) ...</li>
             </ul>
 	          <aside class="notes">
@@ -87,13 +94,14 @@
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>What company is Roland working for?</h2>
+	          <h2>What is Roland's twitter handle?</h2>
 	          <aside class="notes">
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>What company is Roland working for?</h2>
-	          <img src="./images/logo.svg" width="50%"/>
+	          <h2>What is Roland's twitter handle?</h2>
+            <h2>@innolocity</h2>
+            <h3>(about the velocity of innovation)</h3>
 	          <aside class="notes">
 	          </aside>
 	        </section>
@@ -223,9 +231,9 @@ end
               </tr>
               <tr>
                 <td>Observations</td>
-                <td>???</td>
-                <td>???</td>
-                <td>???</td>
+                <td>I love Haskell</td>
+                <td>sbt is slow (compared to mix)</td>
+                <td>Slow???</td>
               </tr>
             </table>
             <hr>
@@ -261,12 +269,12 @@ object Fib {
   import scala.math.BigInt
 
   def fib2(n: Int): BigInt = {
-    def go(n: Int, acc: (BigInt, BigInt)): BigInt = n match {
+    def fib2p(n: Int, acc: (BigInt, BigInt)): BigInt = n match {
       case 0 => acc._1
-      case _ => go(n - 1, (acc._2, acc._1 + acc._2))
+      case _ => fib2p(n - 1, (acc._2, acc._1 + acc._2))
     }
 
-    go(n, (0, 1))
+    fib2p(n, (0, 1))
   }
 }
             </code></pre>
@@ -279,9 +287,9 @@ object Fib {
 defmodule Fib do
   @moduledoc false
 
-  def fib2(n), do: go2(n, {0, 1})
-  defp go2(0, {a, _}), do: a
-  defp go2(n, {a, b}), do: go2(n - 1, {b, a + b})
+  def fib2(n), do: fib2p(n, {0, 1})
+  defp fib2p(0, {a, _}), do: a
+  defp fib2p(n, {a, b}), do: fib2p(n - 1, {b, a + b})
 end
             </code></pre>
             <aside class="notes">
@@ -304,16 +312,16 @@ end
               </tr>
               <tr>
                 <td>Observations</td>
-                <td>???</td>
-                <td>???</td>
-                <td>???</td>
+                <td>Lazy :)</td>
+                <td>Slowest :)</td>
+                <td>No BigInt :)</td>
               </tr>
             </table>
             <hr>
             <ul>
               <li>fib2(10000)</li>
-              <li>???</li>
-              <li>???</li>
+              <li>Much faster (in general)</li>
+              <li>Stack does not explode :)</li>
             </ul>
             <aside class="notes">
 	          </aside>
@@ -379,16 +387,16 @@ end
               </tr>
               <tr>
                 <td>Observations</td>
-                <td>???</td>
-                <td>???</td>
-                <td>???</td>
+                <td>Using timeItT</td>
+                <td>Roll your own</td>
+                <td>Using :time.tc/1</td>
               </tr>
             </table>
             <hr>
             <ul>
               <li>fib3(10000)</li>
-              <li>???</li>
-              <li>???</li>
+              <li>About as fast as TER</li>
+              <li>Elegant :)</li>
             </ul>
             <aside class="notes">
 	          </aside>
@@ -413,44 +421,65 @@ end
               </tr>
               <tr>
                 <td>Performance</td>
-                <td>???</td>
-                <td>???</td>
-                <td>???</td>
+                <td> 9.2/0.012/0.008</td>
+                <td> 6.8/0.115/0.081</td>
+                <td>34.2/0.008/0.012</td>
               </tr>
               <tr>
                 <td>Observations</td>
-                <td>???</td>
-                <td>???</td>
-                <td>???</td>
+                <td>Like types</td>
+                <td>Like JVM</td>
+                <td>Like processes</td>
               </tr>
             </table>
 	          <aside class="notes">
 	          </aside>
 	        </section>
-       </section>
-
-       <section>
-         <section>
+          <section>
            <h2>Summary - Summary</h2>
-	          <img src="./images/elixir-haskell.png" width="50%"/>
+	          <img src="./images/elixir-haskell.png" width="40%"/>
+	          <p>
+	            <small>
+                Source: <a href="http://stackshare.io">stackshare.io</a>
+              </small>
+	          </p>
 	          <aside class="notes">
 	          </aside>
 	        </section>
 	        <section>
 	          <h2>Summary - Summary</h2>
-	          <img src="./images/elixir-scala.png" width="45%"/>
+	          <img src="./images/elixir-scala.png" width="40%"/>
+	          <p>
+	            <small>
+                Source: <a href="http://stackshare.io">stackshare.io</a>
+              </small>
+	          </p>
 	          <aside class="notes">
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>What company is Roland working for?</h2>
+	          <h2>What is Roland's twitter handle?</h2>
 	          <aside class="notes">
 	          </aside>
 	        </section>
 	        <section>
-	          <h2>What company is Roland working for?</h2>
-	          <img src="./images/logo.svg" width="50%"/>
+	          <h2>What is Roland's twitter handle?</h2>
+            <h2>@innolocity</h2>
 	          <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>USE IT !!!</h2>
+	          <aside class="notes">
+	          </aside>
+	        </section>
+	        <section>
+	          <h2>... DONE!!! Next???</h2>
+	          <img src="./images/squirrel.jpg" width="50%"/>
+	          <aside class="notes">
+              <ul>
+                <li>Buckle up! This is going to be fast!!! (fasten seatbelt sign)</li>
+              </ul>
 	          </aside>
 	        </section>
        </section>
