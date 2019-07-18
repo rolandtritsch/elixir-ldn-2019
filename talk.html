@@ -255,9 +255,9 @@ end
 module Fib where
 
 fib2 :: Int -> Integer
-fib2 n = go n (0, 1) where
-  go 0 (a, _) = a
-  go n (a, b) = go (n - 1) (b, a + b)
+fib2 n = fib2p n (0, 1) where
+  fib2p 0 (a, _) = a
+  fib2p n (a, b) = fib2p (n - 1) (b, a + b)
             </code></pre>
             <aside class="notes">
 	          </aside>
@@ -414,7 +414,7 @@ end
                 <th>Elixir</th>
               </tr>
               <tr>
-                <td>Build</td>
+                <td>Development</td>
                 <td>stack, hackage, intero, ...</td>
                 <td>sbt, mvn, ensime, ...</td>
                 <td>mix, hex, alchemist, ...</td>
@@ -477,9 +477,6 @@ end
 	          <h2>... DONE!!! Next???</h2>
 	          <img src="./images/squirrel.jpg" width="50%"/>
 	          <aside class="notes">
-              <ul>
-                <li>Buckle up! This is going to be fast!!! (fasten seatbelt sign)</li>
-              </ul>
 	          </aside>
 	        </section>
        </section>
