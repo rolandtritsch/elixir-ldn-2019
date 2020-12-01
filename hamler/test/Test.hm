@@ -1,0 +1,22 @@
+module Test where
+
+import Prelude
+
+import Fib (fib, fib2)
+
+import Test.QuickCheck (TestGroup(..), TestResult, quickCheck1, runTest)
+
+shouldBe :: (Integer -> Integer) -> Integer -> Integer -> Integer -> Boolean
+shouldBe f n i _ = f n == i
+
+test :: TestGroup (Integer -> IO TestResult)
+test = Exe [ quickCheck1 "fib: 0 shouldBe 0"  (shouldBe fib 0 0)
+           , quickCheck1 "fib: 1 shouldbe 1"  (shouldBe fib 1 1)
+           , quickCheck1 "fib: 10 shouldbe 55"  (shouldBe fib 10 55)
+           , quickCheck1 "fib2: 0 shouldbe 0"  (shouldBe fib2 0 0)
+           , quickCheck1 "fib2: 1 shouldbe 1"  (shouldBe fib2 1 1)
+           , quickCheck1 "fib2: 10 shouldbe 55"  (shouldBe fib2 10 55)
+           ]
+
+main ::  IO ()
+main = runTest $ test
